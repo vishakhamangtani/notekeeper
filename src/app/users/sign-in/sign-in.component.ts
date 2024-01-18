@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 import { UsersService } from '../users.service';
 
 @Component({
@@ -8,7 +8,8 @@ import { UsersService } from '../users.service';
   styleUrls: ['./sign-in.component.css']
 })
 export class SignInComponent {
-  createForm = new FormControl({
+
+  createForm = new FormGroup({
     "username": new FormControl(),
     "password" : new FormControl()
   });
@@ -16,6 +17,7 @@ export class SignInComponent {
   
   validate():void{
     this.usersService.validateUser(this.createForm.value).subscribe((data)=>{
+      console.log("hii")
       console.log(data)
     })
   }
