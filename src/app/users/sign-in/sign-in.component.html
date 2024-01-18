@@ -1,12 +1,110 @@
-<form [formGroup]="createForm">
+<!-- <form [formGroup]="createForm">
   <div class="form-group">
     <label for="exampleInputEmail1">Enter Username</label>
-    <input type="email"     formControlName="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    <input
+      type="email"
+      formControlName="username"
+      class="form-control"
+      id="exampleInputEmail1"
+      aria-describedby="emailHelp"
+      placeholder="Enter email"
+    />
+    <small id="emailHelp" class="form-text text-muted"
+      >We'll never share your email with anyone else.</small
+    >
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">Password</label>
-    <input type="password" formControlName="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    <input
+      type="password"
+      formControlName="password"
+      class="form-control"
+      id="exampleInputPassword1"
+      placeholder="Password"
+    />
   </div>
-  <button type="submit" (click)="validate()" class="btn btn-primary">Submit</button>
-</form>
+  <button type="submit" (click)="validate()" class="btn btn-primary">
+    Submit
+  </button>
+</form> -->
+<section class="loginSection displayFlex">
+  <!-- Login Left Side Content Starts -->
+  <div class="loginLeftSideSection">
+    <div class="leftSideContent">
+      <div>
+        <span class="starIcon">★</span>
+      </div>
+      <h1 class="leftSideTitle">Hello Manager!</h1>
+      <p class="descriptionContent">
+        Welcome back to the Admin Panel. Login here to start accessing the data
+        and make edits in them.
+      </p>
+    </div>
+    <!-- Copyright Content -->
+    <p class="copyRight">2023 Pixolo. All rights reserved</p>
+  </div>
+  <!-- Login Left Side Content Ends-->
+
+  <!-- Login Right Side Content Starts-->
+  <div class="rightSideMax">
+    <!-- Main Right side section with max-width 500px -->
+    <div class="loginRightSideSection directionCol">
+      <div class="brandLogo">
+        <img
+          src="../../../public/images/brand/brand-logo.png"
+          alt="Adidas Logo"
+          width="136"
+          class="popupImage"
+        />
+      </div>
+      <div>
+        <div>
+          <h4 class="welcomeLineStyle">Welcome back</h4>
+          <p class="welcomeContent">Login to the Eighty Days Admin Panel</p>
+        </div>
+
+      <form [formGroup]="createForm" action="">  <!-- Email Input -->
+        <div>
+          <label for="userEmailInput">Email</label>
+          <input
+            type="email"
+            id="userEmailInput"
+            placeholder="Type Email here"
+            formControlName="username"
+          />
+        </div>
+
+        <!-- Password Input -->
+        <div>
+          <label for="passwordInput">Password</label>
+          <input
+            type="password"
+            id="passwordInput"
+            formControlName="password"
+            placeholder="Enter password"
+          />
+        </div>
+
+        <!-- Login Button -->
+        <div class="buttonWrapper">
+          <button
+            type="button"
+            class="regular block primary"
+            (click)="validate()"
+          >
+            Login
+          </button>
+        </div>
+        <!-- Input Form for Login Credentials Ends --></form>
+
+        <!-- Forgot Password Content -->
+        <div class="forgotPasswordText">
+          Forgot Password?
+          <a href="" class="forgotPasswordButton">Click Here</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Login Right Side Content Ends-->
+</section>
+<!-- Main Login Section Content End -->
